@@ -1,0 +1,12 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+
+retail-react-app/node_modules/
+retail-react-app/config/
+retail-react-app/.eslintignore
+retail-react-app/.eslintrc.js
+retail-react-app/.prettierrc.yaml
+retail-react-app/babel.config.js
+retail-react-app/package-lock.json
+retail-react-app/package.json
+retail-react-app/translations/
+retail-react-app/worker/
