@@ -33,6 +33,7 @@ import {
 
 import {useServerContext} from '@salesforce/pwa-kit-react-sdk/ssr/universal/hooks'
 import {useProductSearch} from '@salesforce/commerce-sdk-react'
+import PageViewer from '../page-viewer'
 
 /**
  * This is the home page for Retail React App.
@@ -73,31 +74,7 @@ const Home = () => {
                 description="Commerce Cloud Retail React App"
                 keywords="Commerce Cloud, Retail React App, React Storefront"
             />
-
-            <Hero
-                title={CUSTOM_HOME_TITLE}
-                img={{
-                    src: getAssetUrl('static/img/hero.png'),
-                    alt: 'npx pwa-kit-create-app'
-                }}
-                actions={
-                    <Stack spacing={{base: 4, sm: 6}} direction={{base: 'column', sm: 'row'}}>
-                        <Button
-                            as={Link}
-                            href="https://developer.salesforce.com/docs/commerce/pwa-kit-managed-runtime/guide/getting-started.html"
-                            target="_blank"
-                            width={{base: 'full', md: 'inherit'}}
-                            paddingX={7}
-                            _hover={{textDecoration: 'none'}}
-                        >
-                            <FormattedMessage
-                                defaultMessage="Get started"
-                                id="home.link.get_started"
-                            />
-                        </Button>
-                    </Stack>
-                }
-            />
+            <PageViewer pageIdProp="pwa-homepage"></PageViewer>
 
             {productSearchResult && (
                 <Section
